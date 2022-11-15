@@ -1,10 +1,11 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import { Home } from "pages";
 
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={Home}>
+      <Route path="/" element={<Home />}>
         {/* Route log-in log in form  */}
         {/* Route log out log out form */}
         {/* Route books - booksList */}
