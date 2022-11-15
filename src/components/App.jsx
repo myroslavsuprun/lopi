@@ -2,8 +2,13 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { Home, Login } from "pages";
 
+
+import Container from '@mui/material/Container';
+import { CssBaseline } from "@mui/material";
+
 const App = () => {
-  return (
+  return (<>
+    <Container>
     <Routes>
       <Route path="/" element={<Home />}>
         <Route index element={<div>Outlet</div>} />
@@ -20,6 +25,9 @@ const App = () => {
         </Route>
       </Route>
     </Routes>
+    </Container>
+    <CssBaseline />
+    </>
   );
 };
 
