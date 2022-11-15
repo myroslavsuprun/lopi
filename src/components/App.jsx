@@ -1,9 +1,14 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Home } from "pages";
+import { Home, Login } from "pages";
+
+
+import Container from '@mui/material/Container';
+import { CssBaseline } from "@mui/material";
 
 const App = () => {
-  return (
+  return (<>
+    <Container>
     <Routes>
       <Route path="/" element={<Home />}>
         <Route index element={<div>Outlet</div>} />
@@ -14,8 +19,15 @@ const App = () => {
         {/* Route lending - lending of books */}
         {/* Route return - returning of books */}
         {/* Route statistics - statistics of books */}
+        
+        <Route path='users/'>
+          <Route path="login/" element={<Login />} />
+        </Route>
       </Route>
     </Routes>
+    </Container>
+    <CssBaseline />
+    </>
   );
 };
 
