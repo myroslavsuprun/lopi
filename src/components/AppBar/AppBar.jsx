@@ -61,7 +61,7 @@ const AppBar = () => {
           </Button>
         </Toolbar>
       </AppBarStyled>
-      <div style={{ height: "64px" }}></div>
+      <div style={{ height: "64px", marginBottom: "50px" }}></div>
     </>
   );
 };
