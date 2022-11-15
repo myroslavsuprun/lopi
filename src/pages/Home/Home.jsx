@@ -1,9 +1,11 @@
 import { Outlet } from "react-router-dom";
 
+import { Header } from "components";
+
 const Home = () => {
   return (
     <>
-      <div>Home Page</div>
+      <Header />
       <Outlet />
     </>
   );
