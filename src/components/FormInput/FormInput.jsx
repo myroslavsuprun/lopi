@@ -11,7 +11,7 @@ function FormInput({
   type,
   id,
   label,
-  cont,
+  inputValue,
   change,
   helperText = "",
   helperDescribe = "",
@@ -26,8 +26,7 @@ function FormInput({
     if (type === "email" && val.length > 0) {
       const re =
         /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      if (re.test(String(cont).toLowerCase())) {
-        console.log("valid");
+      if (re.test(String(inputValue).toLowerCase())) {
         setError(false);
       } else {
         setError(true);
@@ -88,7 +87,7 @@ function FormInput({
         type={type}
         id={id}
         aria-describedby={helperDescribe.length > 0 ? helperDescribe : ""}
-        value={cont}
+        value={inputValue}
         onChange={(e) => validate(e.target.value, type)}
         onFocus={focusInput}
       />

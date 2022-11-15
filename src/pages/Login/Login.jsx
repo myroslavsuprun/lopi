@@ -10,18 +10,14 @@ function Login() {
   const [emailValid, setEmailValid] = useState(false);
   const [passwordValid, setPasswordValid] = useState(false);
 
+  let valid = emailValid && passwordValid;
+
   const setEmailFieldValid = (validVal) => {
     setEmailValid(validVal);
   };
   const setPasswordFieldValid = (validVal) => {
     setPasswordValid(validVal);
   };
-
-  const [valid, setValid] = useState(false);
-
-  useEffect(() => {
-    setValid(emailValid && passwordValid);
-  }, [emailValid, passwordValid, setValid]);
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -38,7 +34,7 @@ function Login() {
           label="Email:"
           id="email"
           change={setEmail}
-          cont={email}
+          inputValue={email}
           type="email"
           validation={setEmailFieldValid}
         />
@@ -47,7 +43,7 @@ function Login() {
           label="Pasword:"
           id="password"
           change={setPassword}
-          cont={password}
+          inputValue={password}
           type="password"
           validation={setPasswordFieldValid}
         />
