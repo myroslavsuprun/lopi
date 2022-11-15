@@ -1,13 +1,9 @@
-import { Link } from "react-router-dom";
+import { AppBar } from "components";
 
 const Header = () => {
   return (
     <header>
-      <ul>
-        <li>
-          <Link to="/books">Books</Link>
-        </li>
-      </ul>
+      <AppBar />
     </header>
   );
 };
