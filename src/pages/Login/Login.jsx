@@ -1,10 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FormInput, Button } from "components";
 import { Container } from "@mui/system";
+import { Typography } from "@mui/material";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const [emailValid, setEmailValid] = useState(false);
+  const [passwordValid, setPasswordValid] = useState(false);
+
+  let valid = emailValid && passwordValid;
+
+  const setEmailFieldValid = (validVal) => {
+    setEmailValid(validVal);
+  };
+  const setPasswordFieldValid = (validVal) => {
+    setPasswordValid(validVal);
+  };
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -13,24 +26,34 @@ function Login() {
 
   return (
     <Container maxWidth="xs">
+      <Typography align="center" gutterBottom variant="h2">
+        Login
+      </Typography>
       <form onSubmit={submitHandler}>
         <FormInput
           label="Email:"
           id="email"
           change={setEmail}
-          cont={email}
+          inputValue={email}
           type="email"
+          validation={setEmailFieldValid}
         />
 
         <FormInput
           label="Pasword:"
           id="password"
           change={setPassword}
-          cont={password}
+          inputValue={password}
           type="password"
+          validation={setPasswordFieldValid}
         />
 
-        <Button type="submit" text="Submit" variant="primary" />
+        <Button
+          disabled={!valid}
+          type="submit"
+          text="Submit"
+          variant="primary"
+        />
       </form>
     </Container>
   );
