@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/lopi/static/css/main.e0201c2c.css",
-    "main.js": "/lopi/static/js/main.ea718883.js",
+    "main.js": "/lopi/static/js/main.2f24af1d.js",
     "index.html": "/lopi/index.html",
     "main.e0201c2c.css.map": "/lopi/static/css/main.e0201c2c.css.map",
-    "main.ea718883.js.map": "/lopi/static/js/main.ea718883.js.map"
+    "main.2f24af1d.js.map": "/lopi/static/js/main.2f24af1d.js.map"
   },
   "entrypoints": [
     "static/css/main.e0201c2c.css",
-    "static/js/main.ea718883.js"
+    "static/js/main.2f24af1d.js"
   ]
 }
