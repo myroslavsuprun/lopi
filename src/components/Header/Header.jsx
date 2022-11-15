@@ -5,7 +5,7 @@ const Header = () => {
     <header>
       <ul>
         <li>
-          <Link to="/booklist">BookList</Link>
+          <Link to="/books">Books</Link>
         </li>
       </ul>
     </header>
