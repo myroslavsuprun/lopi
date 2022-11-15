@@ -20,6 +20,13 @@ function FormInput({
   const [error, setError] = useState(false);
   const [focus, setFocus] = useState(false);
 
+  useEffect(() => {
+    validation(false);
+    if (!error && focus) {
+      validation(true);
+    }
+  }, [error, focus, validation]);
+
   const validate = (val, type) => {
     change(val);
 
@@ -65,13 +72,6 @@ function FormInput({
       setError(true);
     }
   };
-
-  useEffect(() => {
-    validation(false);
-    if (!error && focus) {
-      validation(true);
-    }
-  }, [error, focus, validation]);
 
   return (
     <FormControl fullWidth>
