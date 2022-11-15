@@ -21,7 +21,6 @@ function FormInput({
   const [focus, setFocus] = useState(false);
 
   const validate = (val, type) => {
-    console.log(val, type);
     change(val);
 
     if (type === "email" && val.length > 0) {
