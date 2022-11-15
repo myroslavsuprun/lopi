@@ -32,6 +32,7 @@ function FormInput({
 
     if (type === "email" && val.length > 0) {
       const re =
+        // eslint-disable-next-line
         /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       if (re.test(String(inputValue).toLowerCase())) {
         setError(false);
