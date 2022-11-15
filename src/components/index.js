@@ -3,3 +3,4 @@ export * from "./Header";
 export * from "./BookCard";
 export * from "./Button";
 export * from "./FormInput";
+export * from "./AppBar";

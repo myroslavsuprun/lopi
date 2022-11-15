@@ -8,7 +8,7 @@ import {
 
 const BookCard = () => {
   return (
-    <Card sx={{ maxWidth: 300 }}>
+    <Card>
       <CardActionArea>
         <CardMedia
           component="img"
