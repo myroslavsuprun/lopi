@@ -6,6 +6,7 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />}>
+        <Route index element={<div>Outlet</div>} />
         {/* Route log-in log in form  */}
         {/* Route log out log out form */}
         {/* Route books - booksList */}
