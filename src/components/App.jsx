@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Home } from "pages";
+import { Home, Login } from "pages";
 
 const App = () => {
   return (
@@ -13,6 +13,10 @@ const App = () => {
         {/* Route lending - lending of books */}
         {/* Route return - returning of books */}
         {/* Route statistics - statistics of books */}
+        
+        <Route path='users/'>
+          <Route path="login/" element={<Login />} />
+        </Route>
       </Route>
     </Routes>
   );
